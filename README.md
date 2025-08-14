@@ -4,6 +4,8 @@ This Python script is designed to bridge the gap between a personal music collec
 
 The primary goal is to overcome the common pitfalls of automated matching, such as finding incorrect live versions, remixes, or tracks by different artists with similar names.
 
+This script was created, tested and tuned with the help of AI. Use at you own risk.
+
 ## Key Features
 
 -   **Intelligent Confidence Scoring:** Each potential match is assigned a score from 0-100 based on a weighted comparison of track name, artist, album, duration, and release year.
