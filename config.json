@@ -1,0 +1,43 @@
+{
+  "_comment_main": "This is the main confidence score needed for a match to be considered 'found'.",
+  "confidence_threshold": 70,
+
+  "_comment_weights": "These are the base weights for the score. E.g., a 100% artist match contributes 35 points.",
+  "base_weights": {
+    "artist": 35,
+    "track_name": 40
+  },
+
+  "_comment_bonuses": "Bonus points awarded for very strong positive signals.",
+  "bonuses": {
+    "strong_album_match": 15,
+    "perfect_core_match": 10,
+    "album_artist_match": 10,
+    "track_number_match": 10
+  },
+
+  "_comment_penalties": "Points subtracted for mismatches. These are negative numbers.",
+  "penalties": {
+    "album_mismatch": -5,
+    "duration_diff_medium": -10,
+    "duration_diff_large": -20,
+    "year_diff_medium": -5,
+    "year_diff_large": -5,
+    "live_mismatch": -15,
+    "album_artist_mismatch": -10,
+    "track_number_mismatch": -5,
+    "unmatched_words_penalty": -15
+  },
+
+  "_comment_rules": "These are the thresholds that trigger the penalties above.",
+  "rules": {
+    "_comment_artist": "A match is instantly discarded if artist similarity is below this.",
+    "min_artist_similarity": 75,
+    "_comment_duration": "A medium duration difference is between 10% and 25%. A large one is >25%.",
+    "duration_diff_medium_percent": 10,
+    "duration_diff_large_percent": 25,
+    "_comment_year": "A medium year difference is between 2 and 5 years. A large one is >5 years.",
+    "year_diff_medium_years": 2,
+    "year_diff_large_years": 5
+  }
+}
